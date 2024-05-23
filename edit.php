@@ -20,12 +20,7 @@ if (!isset($_SESSION['valid'])) {
 <body>
     <div class="nav">
         <div class="logo">
-            <p><a href="home.php"> Logo</a></p>
-        </div>
-
-        <div class="right-links">
-            <a href="#">Change Profile</a>
-            <a href="php/logout.php"> <button class="btn">Log Out</button> </a>
+            <p><a href="#" class="logo">Car<span>Point</span></a></p>
         </div>
     </div>
     <div class="container">
@@ -34,11 +29,11 @@ if (!isset($_SESSION['valid'])) {
             if (isset($_POST['submit'])) {
                 $username = $_POST['username'];
                 $email = $_POST['email'];
-
+                $phone = $_POST['phone_num'];
                 $id = $_SESSION['id'];
 
-                $edit_query = mysqli_query($con, "UPDATE users SET Username='$username', Email='$email' WHERE Id=$id ") or die("error occurred");
-
+                $edit_query = mysqli_query($con, "UPDATE users SET Username='$username', Email='$email',phone_num='$phone' WHERE Id=$id ") or die("error occurred");
+                // mysqli_query($con, "DELETE FROM `users` WHERE Id=$id ") or die("error occurred");
                 if ($edit_query) {
                     echo "<div class='message'>
                     <p>Profile Updated!</p>
@@ -54,6 +49,7 @@ if (!isset($_SESSION['valid'])) {
                 while ($result = mysqli_fetch_assoc($query)) {
                     $res_Uname = $result['Username'];
                     $res_Email = $result['Email'];
+                    $res_phone = $result['phone_num'];
                 }
 
                 ?>
@@ -71,9 +67,20 @@ if (!isset($_SESSION['valid'])) {
                             required>
                     </div>
 
+                    <div class="field input">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" name="phone" id="phone" value="<?php echo $res_phone; ?>" autocomplete="off"
+                            required>
+                    </div>
+
                     <div class="field">
 
                         <input type="submit" class="btn" name="submit" value="Update" required>
+                    </div>
+
+                    <div class="field">
+
+                        <input type="submit" class="btn" name="delete" value="Delete Account" required>
                     </div>
 
                 </form>
