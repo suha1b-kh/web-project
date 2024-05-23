@@ -41,10 +41,16 @@ body {
 }
 
 .container {
-  max-width: 1068px;
+  max-width: 100%px;
   margin-left: auto;
   margin-right: auto;
 }
+
+a {
+  color: #d90429;
+  text-decoration: none;
+}
+
 
 header {
   display: block;
@@ -71,6 +77,8 @@ header.shadow #search-icon {
   align-items: center;
   justify-content: space-between;
   padding: 20px 35px;
+  width: 100%;
+
 }
 
 #menu-icon {
