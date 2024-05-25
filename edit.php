@@ -33,16 +33,14 @@ if (!isset($_SESSION['valid'])) {
                 $id = $_SESSION['id'];
 
                 $edit_query = mysqli_query($con, "UPDATE users SET Username='$username', Email='$email',phone_num='$phone' WHERE Id=$id ") or die("error occurred");
-                // mysqli_query($con, "DELETE FROM `users` WHERE Id=$id ") or die("error occurred");
                 if ($edit_query) {
                     echo "<div class='message'>
                     <p>Profile Updated!</p>
                 </div> <br>";
-                    echo "<a href='home.php'><button class='btn'>Go Home</button>";
+                    echo "<a href='index.php'><button class='btn'>Go Home</button>";
 
                 }
             } else {
-
                 $id = $_SESSION['id'];
                 $query = mysqli_query($con, "SELECT*FROM users WHERE Id=$id ");
 
@@ -78,10 +76,6 @@ if (!isset($_SESSION['valid'])) {
                         <input type="submit" class="btn" name="submit" value="Update" required>
                     </div>
 
-                    <div class="field">
-
-                        <input type="submit" class="btn" name="delete" value="Delete Account" required>
-                    </div>
 
                 </form>
             </div>

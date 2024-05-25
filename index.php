@@ -35,7 +35,7 @@
       </div>
       <a href="edit.php" class="edit">edit profile</a>
       <a href="delete.php" class="edit">delete profile</a>
-      <a href="login.php" class="edit">Log out</a>
+      <a href="login.html" class="edit">Log out</a>
 
 
 
