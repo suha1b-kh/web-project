@@ -30,9 +30,9 @@ if (!isset($_SESSION['valid'])) {
             if (isset($_POST['edit'])) {
                 $username = $_POST['username'];
                 $email = $_POST['email'];
-                $phone = $_POST['phone_num'];
+                $pass = $_POST['pass'];
                 $id = $_SESSION['id'];
-                $edit_query = mysqli_query($con, "UPDATE users SET Username='$username',phone_num='$phone' WHERE email = '$email'") or die("error occurred");
+                $edit_query = mysqli_query($con, "UPDATE users SET Username='$username',password='$pass' WHERE email = '$email'") or die("error occurred");
                 if ($edit_query) {
                     echo "<div class='message'>
                     <p>Profile Updated!</p>
