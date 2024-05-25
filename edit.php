@@ -51,36 +51,8 @@ if (!isset($_SESSION['valid'])) {
                 }
 
                 ?>
-                <header>Change Profile</header>
-                <form action="" method="post">
-                    <div class="field input">
-                        <label for="username">Username</label>
-                        <input type="text" name="username" id="username" value="<?php echo $res_Uname; ?>"
-                            autocomplete="off" required>
-                    </div>
-
-                    <div class="field input">
-                        <label for="email">Email</label>
-                        <input type="text" name="email" id="email" value="<?php echo $res_Email; ?>" autocomplete="off"
-                            required>
-                    </div>
-
-                    <div class="field input">
-                        <label for="phone">Phone Number</label>
-                        <input type="text" name="phone" id="phone" value="<?php echo $res_phone; ?>" autocomplete="off"
-                            required>
-                    </div>
-
-                    <div class="field">
-
-                        <input type="submit" class="btn" name="submit" value="Update" required>
-                    </div>
-
-
-                </form>
-            </div>
-        <?php } ?>
-    </div>
+            <?php } ?>
+        </div>
 </body>
 
 </html>

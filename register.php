@@ -20,8 +20,6 @@
                 $phone = $_POST['phone_num'];
                 $password = $_POST['password'];
 
-                //verifying the unique email
-            
                 $verify_query = mysqli_query($con, "SELECT Email FROM users WHERE Email='$email'");
 
                 if (mysqli_num_rows($verify_query) != 0) {
@@ -37,47 +35,13 @@
                       <p>Registration successfully!</p>
                   </div> <br>";
                     echo "<a href='login.html'><button class='btn'>Login Now</button>";
-
-
                 }
 
             } else {
 
                 ?>
-
-                <header>Sign Up</header>
-                <form action="" method="post">
-                    <div class="field input">
-                        <label for="username">Username</label>
-                        <input type="text" name="username" id="username" autocomplete="off" required>
-                    </div>
-
-                    <div class="field input">
-                        <label for="email">Email</label>
-                        <input type="text" name="email" id="email" autocomplete="off" required>
-                    </div>
-
-                    <div class="field input">
-                        <label for="phone_num">phone number</label>
-                        <input type="text" name="phone_num" id="phone_num" autocomplete="off" required>
-                    </div>
-                    <div class="field input">
-                        <label for="password">Password</label>
-                        <input type="password" name="password" id="password" autocomplete="off" required>
-                    </div>
-
-
-                    <div class="field">
-
-                        <input type="submit" class="btn" name="submit" value="Register" required>
-                    </div>
-                    <div class="links">
-                        Already a member? <a href="login.html">Sign In</a>
-                    </div>
-                </form>
-            </div>
-        <?php } ?>
-    </div>
+            <?php } ?>
+        </div>
 </body>
 
 </html>

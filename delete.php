@@ -30,30 +30,13 @@ if (!isset($_SESSION['valid'])) {
                 $result = mysqli_query($con, "DELETE FROM `users` WHERE email='$email' and password = '$password'") or die("Select Error");
                 echo "<div class='message'>
                       <p>Account Deleted successfully!</p>
-                      <a href='register.php'>back to registeration</a>
+                      <a href='register.html'>back to registeration</a>
                   </div> <br>";
                 $row = mysqli_fetch_assoc($result);
             }
 
 
             ?>
-            <header>Delete Account</header>
-            <form action="" method="post">
-                <div class="field input">
-                    <label for="email">Email</label>
-                    <input type="text" name="email" id="email" autocomplete="off" required>
-                </div>
-
-                <div class="field input">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" autocomplete="off" required>
-                </div>
-
-                <div class="field">
-
-                    <input type="submit" class="btn" name="submit" value="Delete" required>
-                </div>
-            </form>
         </div>
 </body>
 

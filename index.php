@@ -33,8 +33,8 @@
       <div class="search-box container">
         <input type="search" name="" id="" placeholder="Search here..." />
       </div>
-      <a href="edit.php" class="edit">edit profile</a>
-      <a href="delete.php" class="edit">delete profile</a>
+      <a href="edit.html" class="edit">edit profile</a>
+      <a href="delete.html" class="edit">delete profile</a>
       <a href="login.html" class="edit">Log out</a>
 
 
