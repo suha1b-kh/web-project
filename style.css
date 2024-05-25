@@ -525,6 +525,7 @@ header.shadow #search-icon {
     border-bottom: none;
     background: var(--main-color);
     color: var(--bg-color);
+    
   }
 
   .navbar.active {
