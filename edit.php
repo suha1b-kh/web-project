@@ -3,7 +3,7 @@ session_start();
 
 include ("php/config.php");
 if (!isset($_SESSION['valid'])) {
-    header("Location: index.php");
+    header("Location: index.html");
 }
 ?>
 <!DOCTYPE html>
@@ -26,18 +26,18 @@ if (!isset($_SESSION['valid'])) {
     <div class="container">
         <div class="box form-box">
             <?php
-            if (isset($_POST['submit'])) {
+
+            if (isset($_POST['edit'])) {
                 $username = $_POST['username'];
                 $email = $_POST['email'];
                 $phone = $_POST['phone_num'];
                 $id = $_SESSION['id'];
-
-                $edit_query = mysqli_query($con, "UPDATE users SET Username='$username', Email='$email',phone_num='$phone' WHERE Id=$id ") or die("error occurred");
+                $edit_query = mysqli_query($con, "UPDATE users SET Username='$username',phone_num='$phone' WHERE email = '$email'") or die("error occurred");
                 if ($edit_query) {
                     echo "<div class='message'>
                     <p>Profile Updated!</p>
                 </div> <br>";
-                    echo "<a href='index.php'><button class='btn'>Go Home</button>";
+                    echo "<a href='index.html'><button class='btn'>Go Home</button>";
 
                 }
             } else {

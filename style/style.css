@@ -90,6 +90,8 @@ body {
 
 .btn:hover {
     opacity: 0.82;
+    color: #d90429;
+    background-color: #fff;
 }
 
 .submit {

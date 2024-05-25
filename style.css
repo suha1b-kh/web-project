@@ -179,14 +179,22 @@ header.shadow #search-icon {
 }
 
 .btn {
-  padding: 10px 22px;
-  background: var(--main-color);
-  color: var(--bg-color);
-  font-weight: 400;
+  height: 35px;
+  background: #d90429;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all .3s;
+  margin-top: 10px;
+  padding: 0px 10px;
 }
 
 .btn:hover {
-  background: #fd052f;
+  opacity: 0.82;
+  color: #d90429;
+  background-color: #fff;
 }
 
 .heading {

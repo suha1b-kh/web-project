@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
 
     }
     if (isset($_SESSION['valid'])) {
-        header("Location: index.php");
+        header("Location: index.html");
     }
 } else {
 
